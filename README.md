@@ -6,6 +6,8 @@ EAS mata kuliah analitika bisnis. Mengimplementasikan Genetic Algorithm dan Goog
 
 ## Buka Instan
 
+**Kode tidak akan bisa dijalankan tanpa dataset.py**
+
 Buka di [Google Colab](https://colab.research.google.com/github/rochimfn/eas-analitika-bisnis/blob/main/EAS.ipynb)
 
 ## Pemasangan dan Penggunaan
