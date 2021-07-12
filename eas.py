@@ -14,6 +14,8 @@ Original file is located at
 # sys.path.append('/content/drive/My Drive/Colab Notebooks/EAS AB')
 
 """## Pustaka"""
+print('WARNING: Jangan menjalankan kode di console biasa')
+print('WARNING: Jalankan kode di lingkungan IPython (spyder, jupyter-notebook, jupyter-lab, etc)')
 
 from dataset import *
 from IPython.display import display
@@ -221,8 +223,8 @@ def bench(count, dataset, bks, method='ga'):
 
 def main():
   BENCHMARK_ITERATION = 10
-  sos_pdav = [ 2.99, 1.56, 3.57, 3.4, 7.13, 1.65, 4.529, 1.31, 3.52, 1.81, 4.88, 4.08, 17.25, 3.81, 2.73 ]
-  sos_pdbest = [0.7, 1.39, 0, 0.74, 6.03, 0.56, 0.07, 0.3, 0.93, 0.27, 3.18, 4.05, 16.79, 1.29, 0.09]
+  # sos_pdav = [ 2.99, 1.56, 3.57, 3.4, 7.13, 1.65, 4.529, 1.31, 3.52, 1.81, 4.88, 4.08, 17.25, 3.81, 2.73 ]
+  # sos_pdbest = [0.7, 1.39, 0, 0.74, 6.03, 0.56, 0.07, 0.3, 0.93, 0.27, 3.18, 4.05, 16.79, 1.29, 0.09]
   dsos_pdav = [ 0.45, 0.01, 0.62, 1.75, 2.46, 0.60, 0.90, 0.64, 0.94, 0.74, 3.43, 0.32, 0.68, 0.93, 0.49]
   dsos_pdbest = [0, 0, 0, 0.74, 1.98, 0, 0, 0, 0, 0, 1.75, 0.02, 0, 0.69, 0.05]
 
@@ -264,12 +266,12 @@ def main():
   map_as_table(ga_results, columns=['Name', 'BKS', 'Average', 'Best', 'PDAv(%)', 'PDBest(%)'])
   map_as_table(gor_results, columns=['Name', 'BKS', 'Average', 'Best', 'PDAv(%)', 'PDBest(%)'])
   
-  plot("SOS vs DSOS vs GA PDBest ", sos=sos_pdbest, dsos=dsos_pdbest, ga=ga_pdbest)
-  plot("SOS vs DSOS vs G-OR PDBest ", sos=sos_pdbest, dsos=dsos_pdbest, gor=gor_pdbest)
+  plot("DSOS vs GA PDBest ", dsos=dsos_pdbest, ga=ga_pdbest)
+  plot("DSOS vs G-OR PDBest ", dsos=dsos_pdbest, gor=gor_pdbest)
   plot("GA vs G-OR PDBest ", ga=ga_pdbest, gor=gor_pdbest)
   
-  plot("SOS vs DSOS vs GA PDAv", sos=sos_pdav, dsos=dsos_pdav, ga=ga_pdav)
-  plot("SOS vs DSOS vs G-OR PDAv", sos=sos_pdav, dsos=dsos_pdav, gor=gor_pdav)
+  plot("DSOS vs GA PDAv", dsos=dsos_pdav, ga=ga_pdav)
+  plot("DSOS vs G-OR PDAv", dsos=dsos_pdav, gor=gor_pdav)
   plot("GA vs G-OR PDAv", ga=ga_pdav, gor=gor_pdav)
 
 main()
